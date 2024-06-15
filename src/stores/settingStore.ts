@@ -1,3 +1,4 @@
+import { debounce } from 'lodash-es'
 import { defineStore } from 'pinia'
 import { reactive } from 'vue'
 
@@ -9,9 +10,9 @@ export const useSettingStore = defineStore('setting', () => {
   const state = reactive<setting>({
     collapse: false,
   })
-  const toggleCollapse = () => {
+  const toggleCollapse = debounce(() => {
     state.collapse = !state.collapse
-  }
+  }, 500)
   function updateSetting(setting: Partial<setting>) {
     Object.assign(state, setting)
   }

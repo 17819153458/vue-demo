@@ -18,8 +18,6 @@
 </template>
 
 <script setup lang="ts">
-import 'animate.css'
-
 import demoHeader from '@/views/layout/header.vue'
 import sidebar from '@/views/layout/sidebar.vue'
 import { useSettingStore } from './stores/settingStore'
