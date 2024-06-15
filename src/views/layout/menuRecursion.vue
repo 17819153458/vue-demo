@@ -10,7 +10,7 @@
       <el-icon v-if="menuItem?.icon">
         <component :is="menuItem?.icon"></component>
       </el-icon>
-      {{ menuItem?.name }}
+      <span>{{ menuItem?.name }}</span>
     </template>
 
     <menu-recursion v-for="item in menuItem.children" :key="item?.id" :menuItem="item"></menu-recursion>
@@ -21,6 +21,7 @@
 import type { Menus } from '@/common/type/menu'
 
 import { PropType } from 'vue'
+
 const props = defineProps({
   menuItem: Object as PropType<Menus>,
 })
