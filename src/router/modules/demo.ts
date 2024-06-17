@@ -9,7 +9,7 @@ export const demoRouter: RouteRecordRaw[] = [
   {
     path: '/layout2',
     name: 'layout2',
-    component: () => import(/* webpackChunkName: "demo" */ '@/views/demo/layout2.vue'),
+    component: () => import(/* webpackChunkName: "demo" */ '@/views/demo/componentEL.vue'),
   },
   {
     path: '/layout3',
